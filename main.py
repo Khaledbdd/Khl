@@ -1,3 +1,12 @@
 from playsound import playsound
+from gtts import gTTS
 
-playsound('Alan Walker - Alone.m4a')
+def playaudio(audio):
+playsound(audio)
+
+def convert_to_audio(text):
+audio = gTTS(text)
+audio.save("test.mp3")
+playaudio("test.mp3")
+
+convert_to_audio("hey Khaled") 
